@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: xanderhendriks/action-build-stm32cubeide@v10.0
+      - uses: xanderhendriks/action-build-stm32cubeide@v12.0
         with:
           project-path: "FreeRTOS_HwSemaphoreCoreSync/STM32CubeIDE/CM7"
-          project-target: "FreeRTOS_HwSemaphoreCoreSync/STM32CubeIDE/CM7"
+          project-target: "FreeRTOS_HwSemaphoreCoreSync_CM7/Debug"

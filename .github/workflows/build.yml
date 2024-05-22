@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths-ignore:
+      - .git*
+      - "**.md"
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths-ignore:
+      - .git*
+      - "**.md"
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xanderhendriks/action-build-stm32cubeide@v10.0
+        with:
+          project-path: "FreeRTOS_HwSemaphoreCoreSync/STM32CubeIDE/CM7"
+          project-target: "FreeRTOS_HwSemaphoreCoreSync/STM32CubeIDE/CM7"
